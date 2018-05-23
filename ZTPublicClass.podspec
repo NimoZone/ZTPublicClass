@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                          项目配置类，如颜色、自定义创建控件、判断机型使用SDAutoLayout约束值等等
                    DESC
 
   s.homepage     = "https://github.com/NimoZone/ZTPublicClass"
@@ -38,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT (example)"
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,8 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  # s.platform     = :ios
+  # s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   s.ios.deployment_target = "8.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/NimoZone/ZTPublicClass", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/NimoZone/ZTPublicClass.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
