@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZTUIKit: NSObject {
+public class ZTUIKit: NSObject {
 
     /// label设置
     ///

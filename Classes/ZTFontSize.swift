@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZTFontSize: UIFont {
+public class ZTFontSize: UIFont {
 
     /// 设备字体
     ///
@@ -18,7 +18,7 @@ class ZTFontSize: UIFont {
     /// - padFont: iPad字体尺寸
     /// - scale: 为ture则乘以一个尺寸比例
     /// - Returns: 返回UI字体尺寸
-    class func fontSize(isUnshared:Bool, phoneFont:CGFloat, padFont:CGFloat, scale:CGFloat)-> UIFont{
+   public class func fontSize(isUnshared:Bool, phoneFont:CGFloat, padFont:CGFloat, scale:CGFloat)-> UIFont{
 
         var commonFont:UIFont
 
@@ -56,7 +56,7 @@ class ZTFontSize: UIFont {
     /// - boldPhonePlusFont: 7P及以上设备加粗
     /// - boldPadFont: pad设备加粗
     /// - Returns: 字体大小
-    class func blodFontSize(boldPhoneFont:CGFloat, boldPhonePlusFont:CGFloat, boldPadFont:CGFloat)->UIFont{
+    public class func blodFontSize(boldPhoneFont:CGFloat, boldPhonePlusFont:CGFloat, boldPadFont:CGFloat)->UIFont{
 
         let font:UIFont
 
@@ -79,7 +79,16 @@ class ZTFontSize: UIFont {
     }
 
     
-    class func fontNameSize(fontName:String, phoneFont:CGFloat, phoneSixFont:CGFloat, phonePlusFont:CGFloat, padFont:CGFloat)->UIFont{
+    /// 自定义字体
+    ///
+    /// - Parameters:
+    ///   - fontName: 字体名
+    ///   - phoneFont: 4-5设备
+    ///   - phoneSixFont: 6、10
+    ///   - phonePlusFont: 7
+    ///   - padFont: pad
+    /// - Returns: 字体大小
+    public class func fontNameSize(fontName:String, phoneFont:CGFloat, phoneSixFont:CGFloat, phonePlusFont:CGFloat, padFont:CGFloat)->UIFont{
 
         let font:UIFont
         let name:String? = fontName

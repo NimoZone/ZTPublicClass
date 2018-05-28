@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZTPublicClass"   #项目名称
-  s.version      = "0.0.4"           #版本号与仓库的标签号对应
+  s.version      = "0.0.5"           #版本号与仓库的标签号对应
   s.summary      = "自用项目配置类"    #项目简介
 
   # This description is used to generate tags and improve search results.
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "say_goodbye" => "say_goodbye000@163.com" }  #作者信息
+  s.author               = { "say_goodbye" => "say_goodbye000@163.com" }  #作者信息
   # Or just: s.author    = "say_goodbye"
   # s.authors            = { "say_goodbye" => "say_goodbye000@163.com" }
   # s.social_media_url   = "http://twitter.com/say_goodbye"
@@ -62,14 +62,9 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
    s.platform     = :ios, "8.0"  #平台及支持的最低版本
+   s.ios.deployment_target = "8.0"
 
-  #  When using multiple platforms
-  #  s.ios.deployment_target = "8.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +86,6 @@ Pod::Spec.new do |s|
 
   s.source_files = "Classes/*.swift"  #代码路径
   s.swift_version = "4.0"             #支持最低语言版本
-  # s.public_header_files = "Classes/**/*.h"
 
 
 
