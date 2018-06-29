@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class ZTMakeColor: UIColor {
+@objc public class ZTMakeColor: UIColor {
 
-   public class func colorWithHexString(hex:String) ->UIColor {
+  @objc  public class func colorWithHexString(hex:String) ->UIColor {
         
         var cString = hex.trimmingCharacters(in:CharacterSet.whitespacesAndNewlines).uppercased()
         

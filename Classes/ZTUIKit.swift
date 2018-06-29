@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ZTUIKit: NSObject {
+@objc public class ZTUIKit: NSObject {
 
     /// label设置
     ///
@@ -19,7 +19,7 @@ public class ZTUIKit: NSObject {
     ///   - textfont: textfont
     ///   - textAlignment: Alignment
     /// - Returns: label
-    public class func createLabel(frame:CGRect, text:String, textColor:UIColor, textfont:UIFont, textAlignment:NSTextAlignment)-> UILabel{
+   @objc public class func createLabel(frame:CGRect, text:String, textColor:UIColor, textfont:UIFont, textAlignment:NSTextAlignment)-> UILabel{
         
         let color:UIColor?  = textColor
         
@@ -31,13 +31,13 @@ public class ZTUIKit: NSObject {
         
         return label
     }
-    
+     
     
     
     /// 随机色
     ///
     /// - Returns: UIColor
-    public class func randomColor() -> UIColor{
+   @objc public class func randomColor() -> UIColor{
         
         let hueRandom:CGFloat   = CGFloat(arc4random() % 256)
         let colorRandom:CGFloat = CGFloat(arc4random() % 128)

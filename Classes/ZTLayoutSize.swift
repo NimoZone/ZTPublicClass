@@ -11,7 +11,7 @@ import UIKit
 let screen_w = UIScreen.main.bounds.size.width
 let screen_h = UIScreen.main.bounds.size.height
 
-public class ZTLayoutSize: NSObject {
+@objc public class ZTLayoutSize: NSObject {
 
 
     /// 约束适配
@@ -22,7 +22,7 @@ public class ZTLayoutSize: NSObject {
     ///   - padStandard: iPad控件标注
     ///   - scale: 为ture则乘以一个尺寸比例
     /// - Returns: 返回UI控件标注
-    public class func layoutSizeWithEdge(isUnshared:Bool, phoneStandard:CGFloat, padStandard:CGFloat, scale:CGFloat)->CGFloat{
+   @objc  public class func layoutSizeWithEdge(isUnshared:Bool, phoneStandard:CGFloat, padStandard:CGFloat, scale:CGFloat)->CGFloat{
 
         var edge:CGFloat = 0.00;
 
@@ -64,7 +64,7 @@ public class ZTLayoutSize: NSObject {
     ///   - X: 10
     ///   - AP: ApplePad
     /// - Returns: 返回UI控件标注
-    public class func fullLayoutSizeWithEdge(VI:CGFloat, VII:CGFloat, X:CGFloat, AP:CGFloat) -> CGFloat {
+   @objc public class func fullLayoutSizeWithEdge(VI:CGFloat, VII:CGFloat, X:CGFloat, AP:CGFloat) -> CGFloat {
 
         var size:CGFloat = 0.00
 
@@ -95,7 +95,7 @@ public class ZTLayoutSize: NSObject {
     ///   - phoneSize: phone
     ///   - phoneXSize: phoneX
     ///   - padSize: pad
-    public class func layoutSizeTopAndBottomFullScalePhoneSize(phoneSize:CGFloat, phoneXSize:CGFloat, padSize:CGFloat) -> CGFloat{
+   @objc public class func layoutSizeTopAndBottomFullScalePhoneSize(phoneSize:CGFloat, phoneXSize:CGFloat, padSize:CGFloat) -> CGFloat{
 
         var size:CGFloat = 0.00
 
