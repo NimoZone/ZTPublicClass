@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public class ZTFontSize: UIFont {
-
+    
     /// 设备字体
     ///
     /// - Parameters: 参数
@@ -18,37 +18,37 @@ import UIKit
     /// - padFont: iPad字体尺寸
     /// - scale: 为ture则乘以一个尺寸比例
     /// - Returns: 返回UI字体尺寸
-   @objc public class func fontSize(isUnshared:Bool, phoneFont:CGFloat, padFont:CGFloat, scale:CGFloat)-> UIFont{
-
+    @objc public class func fontSize(isUnshared:Bool, phoneFont:CGFloat, padFont:CGFloat, scale:CGFloat)-> UIFont{
+        
         var commonFont:UIFont
-
+        
         if isUnshared {
-
+            
             if screen_h >= 1024{
-
+                
                 commonFont = UIFont.systemFont(ofSize: padFont);
             }else{
-
+                
                 if screen_h > 667 && screen_h != 812 {
-
+                    
                     commonFont = UIFont.systemFont(ofSize: phoneFont*(screen_h/667)*scale)
                 }else{
-
+                    
                     commonFont = UIFont.systemFont(ofSize: phoneFont);
                 }
             }
         }else{
-
+            
             if (screen_h >= 1024) {
                 commonFont = UIFont.systemFont(ofSize: padFont);
             }else{
                 commonFont = UIFont.systemFont(ofSize: phoneFont);
             }
         }
-
+        
         return commonFont;
     }
-
+    
     /// 加粗设备字体
     ///
     /// - Parameters:参数
@@ -56,28 +56,28 @@ import UIKit
     /// - boldPhonePlusFont: 7P及以上设备加粗
     /// - boldPadFont: pad设备加粗
     /// - Returns: 字体大小
-   @objc public class func blodFontSize(boldPhoneFont:CGFloat, boldPhonePlusFont:CGFloat, boldPadFont:CGFloat)->UIFont{
-
+    @objc public class func blodFontSize(boldPhoneFont:CGFloat, boldPhonePlusFont:CGFloat, boldPadFont:CGFloat)->UIFont{
+        
         let font:UIFont
-
+        
         if(screen_w > 414){
             //iPad 版本代码;
             font = UIFont.boldSystemFont(ofSize: boldPadFont);
         }else{
-
+            
             //iPhone/iPod touch 版本代码;
             if (screen_w <= 375 ) {
-
+                
                 font = UIFont.boldSystemFont(ofSize: boldPhoneFont)
             }else{
-
+                
                 font = UIFont.boldSystemFont(ofSize: boldPhonePlusFont)
             }
         }
-
+        
         return font
     }
-
+    
     
     /// 自定义字体
     ///
@@ -88,29 +88,30 @@ import UIKit
     ///   - phonePlusFont: 7
     ///   - padFont: pad
     /// - Returns: 字体大小
-   @objc public class func fontNameSize(fontName:String, phoneFont:CGFloat, phoneSixFont:CGFloat, phonePlusFont:CGFloat, padFont:CGFloat)->UIFont{
-
+    @objc public class func fontNameSize(fontName:String, phoneFont:CGFloat, phoneSixFont:CGFloat, phonePlusFont:CGFloat, padFont:CGFloat)->UIFont{
+        
         let font:UIFont
         let name:String? = fontName
         
         if screen_w > 414{
             //iPad 版本代码;
-
-            font = (name == nil ? UIFont.systemFont(ofSize: padFont) : UIFont.init(name: fontName, size: padFont)!)
-
+            
+            font = (name == "" ? UIFont.systemFont(ofSize: padFont) : UIFont.init(name: fontName, size: padFont)!)
+            
         } else{
             //iPhone/iPod touch 版本代码;
             if screen_w == 320 {
-
-                font = (name == nil ? UIFont.systemFont(ofSize: phoneFont) : UIFont.init(name: fontName, size: phoneFont)!)
-
+                
+                font = (name == "" ? UIFont.systemFont(ofSize: phoneFont) : UIFont.init(name: fontName, size: phoneFont)!)
+                
             }else if screen_w == 375{
-
-                font = (name == nil ? UIFont.systemFont(ofSize: phoneSixFont) : UIFont.init(name: fontName, size: phoneSixFont)!)
-
+                
+                font = (name == "" ? UIFont.systemFont(ofSize: phoneSixFont) : UIFont.init(name: fontName, size: phoneSixFont)!)
+                
             }else{
-
-                font = (name == nil ? UIFont.systemFont(ofSize: phonePlusFont) : UIFont.init(name: fontName, size: phonePlusFont)!)
+                
+                font = (name == "" ? UIFont.systemFont(ofSize: phonePlusFont) : UIFont.init(name: fontName, size: phonePlusFont)!)
+                
             }
         }
         return font;
