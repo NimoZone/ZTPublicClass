@@ -47,7 +47,7 @@ import UIKit
         
         let paragraphStyle:NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = line
-        paragraphStyle.alignment   = NSTextAlignment(rawValue: alignment)!//
+        paragraphStyle.alignment   = NSTextAlignment(rawValue: alignment)!
         
         let attributedStr:NSMutableAttributedString = NSMutableAttributedString.init(string: text)
         attributedStr.addAttribute(NSAttributedStringKey.foregroundColor, value: color, range: NSMakeRange(loc, len))
