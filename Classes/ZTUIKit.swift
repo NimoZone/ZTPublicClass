@@ -24,9 +24,9 @@ import UIKit
         let color:UIColor?  = textColor
         
         let label           = UILabel.init(frame: frame)
-        label.text          =  text;
-        label.font          = textfont
-        label.textAlignment = textAlignment;
+        label.text          = textString
+        label.font          = textFont
+        label.textAlignment = textAlignment
         label.textColor     = (color != nil ? color : UIColor.black)
         
         return label
