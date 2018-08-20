@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZTPublicClass"   #项目名称
-  s.version      = "1.0.1"           #版本号与仓库的标签号对应
+  s.version      = "1.0.2"           #版本号与仓库的标签号对应
   s.summary      = "自用项目配置类"    #项目简介
 
   # This description is used to generate tags and improve search results.
