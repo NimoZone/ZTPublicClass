@@ -19,7 +19,7 @@ import UIKit
     ///   - textfont: textfont
     ///   - textAlignment: Alignment
     /// - Returns: label
-    @objc public class func createLabel(frame:CGRect, text:String, textColor:UIColor, textfont:UIFont, textAlignment:NSTextAlignment)-> UILabel{
+    @objc public class func createLabel(frame:CGRect, textString:String, textColor:UIColor, textFont:UIFont, textAlignment:NSTextAlignment)-> UILabel{
         
         let color:UIColor?  = textColor
         
