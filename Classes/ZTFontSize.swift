@@ -29,9 +29,12 @@ import UIKit
                 commonFont = UIFont.systemFont(ofSize: padFont);
             }else{
                 
-                if screen_h > 667 && screen_h != 812 {
+                if screen_h >= 667 && screen_h < 812 {
                     
                     commonFont = UIFont.systemFont(ofSize: phoneFont*(screen_h/667)*scale)
+                }else if screen_h > 812 && screen_h < 1024{
+                    
+                    commonFont = UIFont.systemFont(ofSize: phoneFont*(screen_h/812)*scale)
                 }else{
                     
                     commonFont = UIFont.systemFont(ofSize: phoneFont);
